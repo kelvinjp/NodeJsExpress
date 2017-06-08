@@ -14,6 +14,7 @@ Modulos requeridos para la seguridad de las Urls
  */
 var bodyParser = require('body-parser');
 var multer = require('multer');
+var upload = multer({ dest: './uploads' });
 var expressSession = require('express-session');
 
 var expressJwt = require('express-jwt');
@@ -25,9 +26,9 @@ var secret = 'this is the secret secret secret 12356';
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({
-	extended: false
+	extended: true
 })); // for parsing application/x-www-form-urlencoded
-app.use(multer()); // for parsing multipart/form-data   
+//app.use(multer()); // for parsing multipart/form-data   
 
 app.all('*', function(req, res, next) {
 	res.header("Access-Control-Allow-Origin", "*");
@@ -38,7 +39,7 @@ app.all('*', function(req, res, next) {
 /*
 Solo para probar si al autenticacion HTTP funciona
  */
-app.get('/', function(req, res) {
+app.get('/a', function(req, res) {
 	res.json('Working...');
 });
 
@@ -139,6 +140,7 @@ app.post('/addUser', function(req, res) {
 	//console.log(req.body.identificacion); 
 	var idtipouser;
 
+	console.log("req....."+JSON.stringify(req.body));
 	if (req.body.idtipouser === undefined) {
 		console.log('Id tipo user is black');
 		idtipouser = 1;

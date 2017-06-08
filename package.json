@@ -1,18 +1,33 @@
 {
-"name"          :   "node-restful-mysql",
-    "version"       :   "0.0.1",
-    "description"   :   "Simple RESTful example of connecting to MySQL via Node.js and return JSON to jQuery client-side",
-    "main"          :   "server.js",
-    "author"        :   "steve.mcdonald@enginpost.com",
-    "dependencies"  :   {
-        "express"   :   "",
-        "mysql"     :   "",
-        "body-parser"   :   "", 
-        "cookie-parser"   :   "",
-        "express-session"   :   "", 
-        "multer"   :   "",
-        "passport"   :   "",
-        "passport-http"   :   "",
-        "passport-local"   :   ""
-    }
+  "name": "node-restful-mysql",
+  "version": "0.0.1",
+  "description": "Simple RESTful example of connecting to MySQL via Node.js and return JSON to jQuery client-side",
+  "main": "server.js",
+  "author": "steve.mcdonald@enginpost.com",
+  "dependencies": {
+    "body-parser": "",
+    "cookie-parser": "",
+    "express": "",
+    "express-jwt": "^5.3.0",
+    "express-session": "",
+    "multer": "",
+    "mysql": "",
+    "passport": "",
+    "passport-http": "",
+    "passport-local": ""
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kelvinjp/NodeJsExpress.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kelvinjp/NodeJsExpress/issues"
+  },
+  "homepage": "https://github.com/kelvinjp/NodeJsExpress#readme"
 }
